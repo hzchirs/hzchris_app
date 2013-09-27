@@ -1,0 +1,13 @@
+<h1>Input User</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_tag show_prime_path, method: 'post' do %>
+
+      <%= label_tag :number, 'Input a number here' %>
+      <%= text_field_tag :number %>
+      
+      <%= submit_tag 'Input', class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

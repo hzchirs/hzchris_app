@@ -1,0 +1,12 @@
+<h1>Show The Biggest Prime</h1>
+
+<div class="row">
+  <div class="span6 offset5">
+  <% if @prime %>
+    <p><%= "The biggest prime of #{params[:number]} is #{@prime}" %></p>
+  <% else %>
+    <p><%= @err %></p>
+  <% end %>
+    <%= link_to 'Back to Home', root_path %>
+  </div>
+</div>
