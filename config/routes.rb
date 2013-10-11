@@ -1,10 +1,13 @@
 HzchrisApp::Application.routes.draw do
   get "static_pages/home"
   root 'static_pages#home'
-  match '/input_name', to: 'homeworks#input_name', via: 'get'
+  resources :samples
+  match '/input-name', to: 'homeworks#input_name', via: 'get',    as: :input_name
   match '/hello', to: 'homeworks#hello', via: 'post'
-  match '/find_prime', to: 'homeworks#find_prime', via: 'get'
-  match '/show_prime', to: 'homeworks#show_prime', via: 'post'
+  match '/find-prime', to: 'homeworks#find_prime', via: 'get',    as: :find_prime
+  match '/show-prime', to: 'homeworks#show_prime', via: 'post',   as: :show_prime
+  match '/about', to: 'homeworks#about', via: 'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

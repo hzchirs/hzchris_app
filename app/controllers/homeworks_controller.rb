@@ -10,7 +10,7 @@ class HomeworksController < ApplicationController
     num = params[:number].to_i
 
     if num <= 1 
-      @err = "The inputed number must be bigger than 1!"
+      @err = "Invalid input!"
       return @err
     end
 
@@ -26,5 +26,9 @@ class HomeworksController < ApplicationController
       end
       num = num - 1
     end
+  end
+
+  def about
+    
   end
 end
