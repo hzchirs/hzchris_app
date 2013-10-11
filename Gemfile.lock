@@ -38,6 +38,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    dalli (2.6.4)
     erubis (2.7.0)
     execjs (2.0.1)
     haml (4.0.3)
@@ -54,6 +55,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    memcachier (0.0.2)
     mime-types (1.25)
     minitest (4.7.5)
     multi_json (1.8.0)
@@ -122,9 +124,11 @@ DEPENDENCIES
   bcrypt-ruby (= 3.0.1)
   bootstrap-sass (= 2.3.2.0)
   coffee-rails (~> 4.0.0)
+  dalli
   haml
   jbuilder (~> 1.2)
   jquery-rails
+  memcachier
   pg
   rails (= 4.0.0)
   rails_12factor

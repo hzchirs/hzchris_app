@@ -53,3 +53,7 @@ group :production do
 end
 
 gem 'haml'
+
+# Use memcachier
+gem 'memcachier'
+gem 'dalli'

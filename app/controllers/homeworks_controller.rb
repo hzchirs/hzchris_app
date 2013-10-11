@@ -7,24 +7,35 @@ class HomeworksController < ApplicationController
   end
 
   def show_prime
-    num = params[:number].to_i
+    number = params[:number].to_i
 
-    if num <= 1 
+    if number <= 1 
       @err = "Invalid input!"
       return @err
-    end
 
-    while num > 2
-      for i in 2..num / 2
-        if num % i == 0
-          break
+    else
+      @prime = Rails.cache.read(number)
 
-        elsif (num % i != 0) && (i == num/2) 
-          @prime = num
-          return @prime
+      unless @prime.nil?
+        return @prime
+
+      else
+        num = number
+
+        while num > 2
+          for i in 2..num / 2
+            if num % i == 0
+              break
+
+            elsif (num % i != 0) && (i == num/2)
+              Rails.cache.write(number, num)
+              @prime = num
+              return @prime
+            end
+          end
+          num = num - 1
         end
       end
-      num = num - 1
     end
   end
 
