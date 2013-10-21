@@ -1,4 +1,7 @@
 HzchrisApp::Application.routes.draw do
+  resources :photos
+
+  resources :events
   get "static_pages/home"
   root 'static_pages#home'
   resources :samples

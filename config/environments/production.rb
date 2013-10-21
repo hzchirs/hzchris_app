@@ -77,4 +77,14 @@ HzchrisApp::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # For Amazon S3
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['hzchris'],
+    :access_key_id => ENV['AKIAJSHAZUGYDN62ZT3Q'],
+    :secret_access_key => ENV['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']
+  }
+}
 end

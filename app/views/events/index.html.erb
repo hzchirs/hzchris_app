@@ -1,0 +1,21 @@
+<h1>Events</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <p>Below are events list</p>
+    <ul>
+    <% @events.each do |event| %>
+      <li>
+        <strong><%= event.name %></strong>
+        <%= link_to 'Show', event_path(event) %>
+
+        <%= link_to 'Edit', edit_event_path(event) %>
+
+        <%= link_to 'Delete', event_path(event), method: 'delete' %>
+      </li>
+    <% end %>
+    <%= paginate @events %>
+    </ul>
+    <%= button_to 'New event', new_event_path, method: 'get', class: "btn btn-primary" %>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<h1><%= @event.name %></h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= simple_format(@event.description) %>
+
+    <%= link_to 'Back to events list', events_path %>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<h1>Photos</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <% @photos.each do |photo| %>
+      <%= image_tag photo.image.url(:small), class: "img-rounded" %>
+    <% end %>
+
+    <%= link_to 'New photos', new_photo_path %>
+  </div>
+</div>

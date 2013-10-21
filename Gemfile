@@ -57,3 +57,12 @@ gem 'haml'
 # Use memcachier
 gem 'memcachier'
 gem 'dalli'
+
+# Use kaminari for paginator
+gem 'kaminari'
+
+# Use paperclip for file process
+gem 'paperclip', "~> 3.0"
+
+# For Amazon S3 access
+gem 'aws-sdk'

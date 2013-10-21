@@ -9,8 +9,8 @@ class HomeworksController < ApplicationController
   def show_prime
     number = params[:number].to_i
 
-    if number <= 1 
-      @err = "Invalid input!"
+    if number <= 1 || number > 100000 
+      @err = "Invalid input! (input must be > 1 and <= 100000)"
       return @err
 
     else
